@@ -11,7 +11,20 @@ class TestRiver < MiniTest::Test
 
     fishes = [fish_1, fish_2, fish_3]
 
-    @fish = Fish.new( fishes )
+    @river = River.new( fishes )
   end 
 
+def test_initial_state
+  assert_equal(3, @river.number_of_fishes())
+end
+
+def test_can_get_fish
+  retrieved_fish = @river.get_fish()
+  assert_equal( "Fred", retrieved_fish.name())
+end  
+
+def test_loses_fish
+  def test_can_get_fish
+    retrieved_fish = @river.get_fish()
+    assert_equal( 2, )
 end
